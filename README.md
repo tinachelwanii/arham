@@ -747,3 +747,17 @@ http://localhost:5001
 ```
 
 Click **Pull Latest Trades** on the dashboard to start a new trade pull.
+
+## Screenshots
+
+### Dashboard
+
+![Dashboard]()
+
+### Pulling Trades
+
+![Pulling Trades](Screenshot (575).png)
+
+### 100 Trades Loaded
+
+![100 Trades](Screenshot (574).png)
