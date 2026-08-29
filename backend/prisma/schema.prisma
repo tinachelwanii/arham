@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Trade {
+  id        Int      @id @default(autoincrement())
+  tradeId   String   @unique
+  client    String
+  symbol    String
+  quantity  Int
+  price     Decimal
+  timestamp DateTime
+  createdAt DateTime @default(now())
+
+  @@index([symbol])
+  @@index([timestamp])
+}
+
+model PullJob {
+  id             String     @id @default(uuid())
+  status         PullStatus
+  startedAt      DateTime?
+  completedAt    DateTime?
+  recordsFetched Int        @default(0)
+  error          String?
+  createdAt      DateTime   @default(now())
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+enum PullStatus {
+  PENDING
+  RUNNING
+  COMPLETED
+  FAILED
+}
