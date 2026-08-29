@@ -755,3 +755,6 @@ Click **Pull Latest Trades** on the dashboard to start a new trade pull.
 ### 100 Trades Loaded
 
 ![100 Trades](./Screenshot%20(574).png)
+
+###3000 Trades Loaded
+![3000 Trades]{./Screenshot%20(577).png).
